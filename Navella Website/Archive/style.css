@@ -1,0 +1,315 @@
+/* ---------------- GLOBAL ---------------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0D0D0D;
+color:white;
+line-height:1.6;
+}
+
+
+
+/* ---------------- NAVBAR ---------------- */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 8%;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.1);
+height:70px;
+}
+
+.logo img{
+height:55px;
+}
+
+nav a{
+color:#eee;
+text-decoration:none;
+margin-left:30px;
+font-size:15px;
+transition:0.4s;
+}
+
+nav a:hover{
+color:#e6dec3;
+}
+
+
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+background:
+linear-gradient(rgba(0, 0, 0, 0.055),rgba(0, 0, 0, 0.214)),
+url("home-bg.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+padding-top:70px;
+}
+
+
+
+/* ---------------- COLLECTION SECTION ---------------- */
+
+.collections{
+padding:120px 10%;
+background:#e5d9db;
+text-align:center;
+color:black;
+}
+
+.collections h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:50px;
+color:black;
+}
+
+.collection-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:30px;
+}
+
+/* FIXED CARD STYLE */
+
+.collection-card{
+position:relative;
+border-radius:14px;
+overflow:hidden;
+cursor:pointer;
+transition:0.4s;
+
+border:2px solid black;
+
+text-decoration:none;
+color:inherit;
+
+display:block;
+outline:none;
+}
+
+.collection-card:link,
+.collection-card:visited,
+.collection-card:focus,
+.collection-card:active{
+text-decoration:none;
+color:inherit;
+outline:none;
+box-shadow:none;
+}
+
+.collection-card img{
+display:block;
+width:100%;
+height:280px;
+object-fit:cover;
+transition:0.5s;
+}
+
+.collection-card h3{
+position:absolute;
+bottom:20px;
+left:20px;
+font-size:24px;
+font-family:'Playfair Display',serif;
+color:white;
+text-shadow:0 0 10px rgba(0,0,0,0.8);
+}
+
+.collection-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.collection-card:hover img{
+transform:scale(1.05);
+}
+
+
+
+/* ---------------- PRODUCTS PAGE ---------------- */
+
+.products-page{
+padding:120px 10%;
+text-align:center;
+background:#e8dbdb;
+color:black;
+}
+
+.products-page h2{
+font-size:38px;
+font-family:'Playfair Display',serif;
+margin-bottom:40px;
+color:black;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+}
+
+.product-card{
+background:#1a1a1a;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+border:1px solid rgba(0,0,0,0.1);
+color:white;
+}
+
+.product-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.product-card h3{
+margin-top:10px;
+font-size:20px;
+}
+
+.product-card p{
+color:#ccc;
+font-size:14px;
+}
+
+.price{
+font-weight:600;
+margin-top:10px;
+color:#D4AF37;
+}
+
+
+
+/* ---------------- BUY BUTTON ---------------- */
+
+.buy-btn{
+display:inline-block;
+margin-top:10px;
+background:#bfbdb8;
+color:black;
+padding:10px 20px;
+border-radius:20px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+}
+
+.buy-btn:hover{
+background:white;
+}
+
+
+
+/* ---------------- IMAGE SLIDER ---------------- */
+
+.image-slider{
+position:relative;
+height:220px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.image-slider img{
+width:100%;
+height:220px;
+object-fit:contain;
+display:none;
+}
+
+.image-slider img.active{
+display:block;
+}
+
+
+
+/* arrows */
+
+.prev,.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
+border:none;
+color:white;
+font-size:22px;
+padding:8px 12px;
+cursor:pointer;
+border-radius:50%;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+.prev:hover,.next:hover{
+background:#e7e3d720;
+color:black;
+}
+
+
+
+/* ---------------- ABOUT ---------------- */
+
+.about{
+padding:100px 15%;
+background:#1a1a1a;
+text-align:center;
+}
+
+.about h2{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:20px;
+}
+
+.about p{
+color:#ccc;
+font-size:15px;
+max-width:700px;
+margin:auto;
+}
+
+
+
+/* ---------------- FOOTER ---------------- */
+
+footer{
+text-align:center;
+padding:25px;
+background:black;
+color:#aaa;
+font-size:14px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
