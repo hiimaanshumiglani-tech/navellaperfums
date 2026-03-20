@@ -111,7 +111,7 @@ showSlide(currentSlide);
 
 }
 
-setInterval(nextSlide,3000);
+setInterval(nextSlide,5000);
 
 if(window.location.pathname.includes("index.html") || window.location.pathname === "/"){
 

@@ -99,6 +99,47 @@ transform:scale(1.08);
 
 }
 
+.hero-content{
+position:absolute;
+top:50%;
+left:8%;
+transform:translateY(-50%);
+text-align:Left;
+color:white;
+align-items:flex-start;
+}
+
+
+.hero-content h1{
+font-family:'Playfair Display',serif;
+font-size:56px;
+letter-spacing:2px;
+margin-bottom:1px;
+}
+
+.hero-content p{
+font-size:18px;
+margin-top:2px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:14px 40px;
+background:#830a30;
+color:white;
+margin-top:20px;
+text-decoration:none;
+border-radius:40px;
+font-size:14px;
+letter-spacing:1px;
+transition:0.5s;
+}
+
+.hero-btn:hover{
+background:#6d1632;
+transform:scale(1.10);
+}
+
 /* COLLECTION SECTION */
 
 .collections{
@@ -180,13 +221,19 @@ color:white;
 /* PRODUCTS PAGE */
 
 body.perfume-page header{
-position:relative;
+position:fixed;
+top:0;
+left:0;
+width:100%;
 background:#3d0718;
+z-index:1000;
 }
 
+
 .products-page{
-padding:80px 80px 60px 80px;
-background:#570c24;
+padding:120px 80px 80px;
+background:linear-gradient(to bottom, #3d0718, #2a0612);
+/*background:#3d0718;*/
 min-height:100vh;
 color:white;
 }
@@ -198,44 +245,61 @@ font-size:34px;
 margin-bottom:60px;
 }
 
+
 .product-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
+grid-template-columns:repeat(3, 2fr);
+gap:50px;
+max-width:1500px;
+margin:auto;
 }
-
 
 /* PRODUCT CARD */
 
+
 .product-card{
-background:white;
-border-radius:14px;
-padding:25px;
+background:transparent;
+padding:0;
+border-radius:12px;
 text-align:center;
-box-shadow:0 20px 40px rgba(0,0,0,0.18);
-transition:0.35s;
+box-shadow:none;
+transition:0.4s;
 }
 
 .product-card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 50px rgba(0,0,0,0.25);
+transform:translateY(-8px);
 }
 
 .product-card h3{
-margin-top:15px;
-font-size:18px;
-color:#111;
+font-size:16px;
+font-weight:500;
+margin-top:10px;
+color:#fff;
 }
 
 .product-card p{
-font-size:14px;
-margin-top:8px;
-color:#444;
+font-size:13px;
+color:#ddd;
+margin-top:5px;
+}
+
+.product-card::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom, rgba(255, 255, 255, 0.144), transparent);
+opacity:0.4;
+pointer-events:none;
 }
 
 .price{
-font-weight:500;
-margin-top:10px;
+font-size:14px;
+font-weight:600;
+color:#ffccaa;
+margin-top:8px;
 }
 
 .category-section{
@@ -245,17 +309,19 @@ max-width:500px;
 
 .category-description{
 color:white;
+margin-bottom:40px;
 }
 
 .category-description h3{
 font-family:'Playfair Display',serif;
-font-size:30px;
-margin-bottom:12px;
+font-size:36px;
+margin-bottom:15px;
 }
 
 .category-description p{
-font-size:15px;
-line-height:1.6;
+font-size:16px;
+line-height:1.7;
+opacity:0.9;
 }
 
 /* BUY BUTTON */
@@ -263,18 +329,18 @@ line-height:1.6;
 .buy-btn{
 display:inline-block;
 margin-top:18px;
-padding:12px 28px;
-background:#3d0718;
+padding:10px 26px;
+background:#830a30;
 color:white;
 text-decoration:none;
-border-radius:30px;
-font-size:13px;
-letter-spacing:1px;
+border-radius:40px;
+font-size:12px;
+letter-spacing:2px;
 transition:0.3s;
 }
 
 .buy-btn:hover{
-background:#6d1632;
+background:#5c0a22;
 transform:scale(1.05);
 }
 
@@ -284,10 +350,8 @@ transform:scale(1.05);
 .image-slider{
 position:relative;
 width:100%;
-height:340px;
-overflow:hidden;
-border-radius:10px;
-background:white;
+height:260px;
+margin-bottom:20px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -295,11 +359,13 @@ justify-content:center;
 
 .image-slider img{
 position:absolute;
-max-width:85%;
-max-height:90%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 object-fit:contain;
 opacity:0;
-transition:opacity 0.5s;
+transition:opacity 0.5s ease;
 }
 
 .image-slider img.active{
@@ -314,9 +380,11 @@ transform:translateY(-50%);
 background:rgba(0,0,0,0.4);
 color:white;
 border:none;
-font-size:20px;
-padding:8px 12px;
+font-size:18px;
+padding:6px 10px;
 cursor:pointer;
+border-radius:50%;
+z-index:2;
 }
 
 .prev{
@@ -325,6 +393,18 @@ left:10px;
 
 .next{
 right:10px;
+}
+
+.image-slider::after{
+content:'';
+position:absolute;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+width:60%;
+height:20px;
+background:radial-gradient(rgba(255,200,150,0.3), transparent);
+filter:blur(10px);
 }
 
 .category-layout{
@@ -373,10 +453,92 @@ font-size:28px;
 }
 
 .category-card.large{
-height:550px;
+height:520px;
 }
 
 .category-card.half{
 flex:1;
-height:700px;
+height:540px;
+}
+
+/* BRAND HIGHLIGHT */
+.brand-highlight{
+padding:80px 20px;
+background:#3d0718;
+color:white;
+text-align:center;
+}
+
+.brand-highlight h2{
+font-family:'Playfair Display',serif;
+font-size:34px;
+margin-bottom:20px;
+}
+
+.brand-highlight p{
+max-width:650px;
+margin:auto;
+line-height:1.7;
+}
+
+/* Improve mobile spacing */
+@media (max-width:768px){
+
+.product-grid{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.hero-slider{
+position:relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:opacity 0.8s ease;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}    
+
+
+.hero-content{
+position:relative;
+top:auto;
+left:auto;
+transform:none;
+padding:30px 20px;
+background:white;
+color:#111;
+text-align:center;
+}
+
+.hero-content h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero-content p{
+font-size:15px;
+margin-bottom:18px;
+}
+
+.hero-btn{
+padding:12px 28px;
+font-size:13px;
+}
+
 }
