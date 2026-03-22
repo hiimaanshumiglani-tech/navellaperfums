@@ -113,7 +113,7 @@ showSlide(currentSlide);
 
 setInterval(nextSlide,5000);
 
-if(window.location.pathname.includes("index.html") || window.location.pathname === "/"){
+if(window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")){
 
 window.addEventListener("scroll",function(){
 
