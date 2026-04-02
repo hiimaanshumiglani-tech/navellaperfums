@@ -34,23 +34,21 @@ product.style.display = "none";
 
 const sliders = document.querySelectorAll(".image-slider");
 
-sliders.forEach(slider => {
+sliders.forEach((slider) => {
+    const images = slider.querySelectorAll("img");
+    let index = 0;
 
-const images = slider.querySelectorAll("img");
+    // show first image
+    images[index].classList.add("active");
 
-const prev = slider.querySelector(".prev");
-const next = slider.querySelector(".next");
+    setInterval(() => {
+        images[index].classList.remove("active");
 
-let index = 0;
+        index = (index + 1) % images.length;
 
-function showImage(i){
-
-images.forEach(img => img.classList.remove("active"));
-
-images[i].classList.add("active");
-
-}
-
+        images[index].classList.add("active");
+    }, 3000);
+});
 next.addEventListener("click", function(){
 
 index++;
@@ -81,11 +79,12 @@ showImage(index);
 
 });
 
-});
+
+
 
 /* HERO AUTO SLIDER */
 
-const slides = document.querySelectorAll(".slide");
+/*const slides = document.querySelectorAll(".slide");
 
 let currentSlide = 0;
 
@@ -111,7 +110,27 @@ showSlide(currentSlide);
 
 }
 
-setInterval(nextSlide,5000);
+setInterval(nextSlide,5000);*/
+
+
+const slides = document.querySelectorAll(".slide");
+
+let currentSlide = 0;
+
+function showSlide(index){
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+// Show first slide initially
+showSlide(currentSlide);
+
+// Move to second slide ONLY ONCE
+setTimeout(() => {
+    currentSlide = 1;
+    showSlide(currentSlide);
+}, 3000); // delay before switching
+
 
 if(window.location.pathname.includes("index.html") || window.location.pathname.endsWith("/")){
 
@@ -130,7 +149,7 @@ header.classList.remove("scrolled");
 }
 
 
-const category = window.location.hash.replace("#","");
+const category  = window.location.hash.replace("#","");
 
 const title = document.getElementById("category-title");
 const text = document.getElementById("category-text");
