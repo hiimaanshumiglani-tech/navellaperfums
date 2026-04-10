@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://navellaperfums.com/sitemap.xml
+
+# Block crawling of unnecessary files
+Disallow: /Archive/
