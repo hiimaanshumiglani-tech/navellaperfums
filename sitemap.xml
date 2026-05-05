@@ -5,22 +5,61 @@
 
   <url>
     <loc>https://navellaperfums.com/</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://navellaperfums.com/"/>
     <image:image>
       <image:loc>https://navellaperfums.com/perfume.png</image:loc>
-      <image:title>Navella Perfumes Hero Banner</image:title>
+      <image:title>Navella Perfumes India</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://navellaperfums.com/All_Perfumes_Card.jpg</image:loc>
+      <image:title>Navella perfume collection</image:title>
     </image:image>
   </url>
 
   <url>
     <loc>https://navellaperfums.com/perfumes.html</loc>
-    <lastmod>2026-04-10</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://navellaperfums.com/perfumes.html"/>
+    <image:image><image:loc>https://navellaperfums.com/Azure.png</image:loc><image:title>Navella Azure perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/Hydra.png</image:loc><image:title>Navella Hydra perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/Ignite.png</image:loc><image:title>Navella Ignite perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/Elixir.png</image:loc><image:title>Navella Elixir perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/Blush.png</image:loc><image:title>Navella Blush perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/Noor.png</image:loc><image:title>Navella Noor perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/White%20Oud.png</image:loc><image:title>Navella White Oud perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/Blue%20Oud.png</image:loc><image:title>Navella Blue Oud perfume</image:title></image:image>
+    <image:image><image:loc>https://navellaperfums.com/Shadow.png</image:loc><image:title>Navella Shadow perfume</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://navellaperfums.com/blog.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://navellaperfums.com/about.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://navellaperfums.com/privacy-policy.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://navellaperfums.com/terms.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

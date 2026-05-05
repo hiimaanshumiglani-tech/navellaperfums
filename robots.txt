@@ -3,5 +3,6 @@ Allow: /
 
 Sitemap: https://navellaperfums.com/sitemap.xml
 
-# Block crawling of unnecessary files
-Disallow: /Archive/
+# Block archive and local development files from search results
+Disallow: /Archive_Versions/
+Disallow: /.chrome-check/
