@@ -266,6 +266,18 @@ nav a:hover::after,nav a.active::after{width:100%;left:0;}
 .about h2::before{content:"~ THE HOUSE ~";}
 .brand-highlight h2::before{content:"~ THE PHILOSOPHY ~";}
 
+.amazon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.amazon-link img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
 /* ========== COLLECTIONS ========== */
 .collections{
   padding:120px 80px;
