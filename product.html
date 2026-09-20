@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Navella Perfumes</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="perfume-page">
+
+  <div class="announcement-ribbon">
+    <span>Direct Checkout via Razorpay or Instant Purchase via Amazon Store</span>
+  </div>
+
+  <header>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Navella"></a>
+ <!-- Desktop & Mobile Drawer Navigation -->
+  <nav id="main-nav">
+    <a href="index.html">Home</a>
+    <a href="perfumes.html">Perfumes</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="order-status.html">Track Orders</a>
+    <a href="cart.html" class="cart-nav-link">
+      <svg class="cart-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+      <span>Cart</span>
+      <span class="cart-count-badge" id="nav-cart-count">0</span>
+    </a>
+    <a href="https://link.amazon/B0fAIjUik" class="amazon-link" target="_blank">
+      <img src="amazon-icon.png" alt="Amazon">
+      <span>Amazon Store</span>
+    </a>
+  </nav>
+
+  <!-- Mobile Hamburger Button (Visible only on mobile) -->
+  <button type="button" class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  </header>
+
+  <section class="products-page" style="padding-top: 140px;">
+    <div class="pdp-container" id="pdp-container">
+      <!-- Injected dynamically via script.js -->
+    </div>
+  </section>
+
+<footer>
+  <p>© 2026 Navella™ Perfums · Enterprise: Naavya Inovations (Prop. Bhawna Arya)</p>
+  <p class="footer-note">H.No. 1042, Sector 19, Faridabad, Haryana · GSTIN: 06CASPA8226N1Z8</p>
+  <p style="margin-top: 14px; font-size: 11px;">
+    <a href="privacy-policy.html">Privacy Policy</a> | 
+    <a href="terms.html">Terms of Service</a> | 
+    <a href="refund-policy.html">Refund Policy</a> | 
+    <a href="contact.html">Contact Us</a>
+  </p>
+</footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProductDetailPage();
+    });
+  </script>
+</body>
+</html>

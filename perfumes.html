@@ -211,7 +211,7 @@
 <body class="perfume-page">
 
 <div class="announcement-ribbon">
-<span>All orders fulfilled via Amazon — Secure checkout & fast delivery</span>
+<span>50ml Luxury Eau De Parfum • High Oil Concentration & Long-Lasting Sillage</span>
 </div>
 
 <header>
@@ -220,15 +220,34 @@
     <img src="logo.png" alt="Navella Perfums">
 </a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="blog.html">Blog</a>
-<a href="https://link.amazon/B0fAIjUik" class="amazon-link">
-    <img src="amazon-icon.png" alt="Amazon">
-    <span>Amazon Store</span>
-</a>
-</nav>
+<!-- Desktop & Mobile Drawer Navigation -->
+  <nav id="main-nav">
+    <a href="index.html">Home</a>
+    <a href="perfumes.html">Perfumes</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="order-status.html">Track Orders</a>
+    <a href="cart.html" class="cart-nav-link">
+      <svg class="cart-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+      <span>Cart</span>
+      <span class="cart-count-badge" id="nav-cart-count">0</span>
+    </a>
+    <a href="https://link.amazon/B0fAIjUik" class="amazon-link" target="_blank">
+      <img src="amazon-icon.png" alt="Amazon">
+      <span>Amazon Store</span>
+    </a>
+  </nav>
+
+  <!-- Mobile Hamburger Button (Visible only on mobile) -->
+  <button type="button" class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
 </header>
 
@@ -269,7 +288,7 @@
 </div>-->
 
 <div class="product-card" id="savage" data-category="men">
-
+<a href="product.html?id=savage" class="product-card-link">
 <div class="image-slider">
 <img src="Savage_web1.png" class="active" alt="Navella Savage perfume bottle - woody aromatic Eau De Parfum for men">
 <img src="Savage_web2.png" alt="Navella Savage long lasting men's perfume packaging">
@@ -281,27 +300,43 @@
 <p class="description">A sophisticated, woody aromatic scent that defines timeless masculine confidence and freedom.</p>
 <p class="inspired">Inspired by - Deor Sauvvage</p>
 <p class="price">50ml — ₹399</p>
-
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="savage" 
+          data-name="Navella Savage" 
+          data-price="399" 
+          data-image="Savage_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://link.amazon/B04BIPWrP" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div>
 
-<div class="product-card" id="hydra" data-category="men">
 
+<div class="product-card" id="hydra" data-category="men">
+<a href="product.html?id=hydra" class="product-card-link">
 <div class="image-slider">
 <img src="Hydra_web1.png" class="active" alt="Navella Hydra aquatic perfume bottle for men">
 <img src="Hydra_web2.png" alt="Navella Hydra long lasting Eau De Parfum packaging">
 <img src="Hydra_web3.png" alt="Navella Hydra fresh sea water and mint fragrance profile">
 <img src="Hydra_web4.png" alt="Navella Hydra men's aquatic fragrance lifestyle image">
 </div>
-
 <h3>Navella Hydra</h3>
 <p class="description">A crisp, aquatic blast of sea water and mint for ultimate refreshment.</p>
 <p class="inspired">Inspired by - Creid Aveentous & Versaace Errose</p>
-<p class="price">50ml — ₹399</p>
-
+<p class="price">50ml — ₹299</p>
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="hydra" 
+          data-name="Navella Hydra" 
+          data-price="299" 
+          data-image="Hydra_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://amzn.to/4v1QiA1" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div>
 
 <!--<div class="product-card" data-category="men">
@@ -322,7 +357,7 @@
 </div>-->
 
 <div class="product-card" id="ignite" data-category="men">
-
+<a href="product.html?id=ignite" class="product-card-link">
 <div class="image-slider">
 <img src="Ignite_web1.png" class="active" alt="Navella Ignite perfume bottle - bold Eau De Parfum for men">
 <img src="Ignite_web2.png" alt="Navella Ignite long lasting men's perfume packaging">
@@ -334,150 +369,143 @@
 <p class="description">A fiery, intense blend of cardamom and toffee for a powerful, magnetic presence.</p>
 <p class="inspired">Inspired by - Azzaero Moust Wonted</p>
 <p class="price">50ml — ₹399</p>
-
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="ignite" 
+          data-name="Navella Ignite" 
+          data-price="399" 
+          data-image="Ignite_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://amzn.to/47HGIrW" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div> 
 
-<!--
-<div class="product-card" data-category="women">
-
-<div class="image-slider">
-<img src="Insomnia_1.png" class="active">
-<img src="Insomnia_2.png">
-</div>
-
-<h3>Navella Insomnia</h3>
-<p class="description">A seductive, dark blend of rich coffee and warm vanilla for mysterious nights.</p>
-<p class="price">50ml — ₹399</p>
-
-<a href="https://amzn.to/4m7zXpo" class="buy-btn">Buy now from Amazon 🛒</a>
-
-</div>-->
-
 <div class="product-card" id="elixir" data-category="women">
-
+<a href="product.html?id=elixir" class="product-card-link">
 <div class="image-slider">
 <img src="Elixir_web1.png" class="active" alt="Navella Elixir perfume bottle - floral Eau De Parfum for women">
 <img src="Elixir_web2.png" alt="Navella Elixir women's long lasting perfume packaging">
 <img src="Elixir_web3.png" alt="Navella Elixir rose and lychee fragrance notes">
 <img src="Elixir_web4.png" alt="Navella Elixir elegant women's perfume lifestyle image">
 </div>
-
 <h3>Navella Elixir</h3>
 <p class="description">A luxurious, creamy rose and lychee scent that feels like a regal embrace.</p>
 <p class="inspired">Inspired by - Deliinah Excelusife</p>
 <p class="price">50ml — ₹399</p>
-
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="elixir" 
+          data-name="Navella Elixir" 
+          data-price="399" 
+          data-image="Elixir_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://amzn.to/4doRd7g" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div>
-
-<!-- <div class="product-card" data-category="women">
-
-<div class="image-slider">
-<img src="TootyFrooty_web1.png" class="active">
-<img src="TootyFrooty_web2.png">
-<img src="TootyFrooty_web3.png">
-<img src="TootyFrooty_web4.png">
-</div>
-
-<h3>Navella Tooty Frooty</h3>
-<p>A playful, sparkling explosion of sweet fruits and vibrant floral energy.</p>
-<p class="inspired">Inspired by: Ajmal Bling</p>
-<p class="price">50ml — ₹399</p>
-
-<a href="https://amazon.in" class="buy-btn">Buy now from Amazon 🛒</a>
-
-</div>-->
 
 <div class="product-card" id="blush" data-category="women">
-
+<a href="product.html?id=blush" class="product-card-link">
 <div class="image-slider">
 <img src="Blush_web1.png" class="active" alt="Navella Blush perfume bottle - fresh floral Eau De Parfum for women">
 <img src="Blush_web2.png" alt="Navella Blush women's perfume packaging">
 <img src="Blush_web3.png" alt="Navella Blush passionfruit and peony fragrance notes">
 <img src="Blush_web4.png" alt="Navella Blush fresh floral perfume lifestyle image">
 </div>
-
 <h3>Navella Blush</h3>
-<p>A bright, flirtatious mix of passionfruit and peony for a fresh, sunny feel.</p>
+<p class="description">A bright, flirtatious mix of passionfruit and peony for a fresh, sunny feel.</p>
 <p class="inspired">Inspired by: Victeoria Secreet Boumbshelle</p>
 <p class="price">50ml — ₹399</p>
-
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="blush" 
+          data-name="Navella Blush" 
+          data-price="399" 
+          data-image="Blush_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://amzn.to/42hE0pZ" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div>
 
 <div class="product-card" id="noor" data-category="unisex">
-
+<a href="product.html?id=noor" class="product-card-link">
 <div class="image-slider">
 <img src="Noor_web1.png" class="active" alt="Navella Noor unisex perfume bottle - elegant floral Eau De Parfum">
 <img src="Noor_web2.png" alt="Navella Noor long lasting unisex perfume packaging">
 <img src="Noor_web3.png" alt="Navella Noor floral fragrance notes and scent profile">
 <img src="Noor_web4.png" alt="Navella Noor versatile unisex fragrance lifestyle image">
 </div>
-
 <h3>Navella Noor</h3>
 <p class="description">An elegant, versatile floral bouquet that balances freshness with sophisticated grace.</p>
 <p class="price">50ml — ₹399</p>
-
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="noor" 
+          data-name="Navella Noor" 
+          data-price="399" 
+          data-image="Noor_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://amzn.to/41Hx0Cl" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div>
 
 <div class="product-card" id="white-oud" data-category="men">
-
+<a href="product.html?id=white-oud" class="product-card-link">
 <div class="image-slider">
 <img src="WhiteOud_web1.png" class="active" alt="Navella White Oud perfume bottle - soft oud Eau De Parfum">
 <img src="WhiteOud_web2.png" alt="Navella White Oud long lasting perfume packaging">
 <img src="WhiteOud_web3.png" alt="Navella White Oud woody musk fragrance notes">
 <img src="WhiteOud_web4.png" alt="Navella White Oud refined oud perfume lifestyle image">
 </div>
-
 <h3>Navella White Oud</h3>
 <p class="description">A soft, airy take on oud featuring smooth woody notes and clean musk.</p>
 <p class="price">50ml — ₹399</p>
-
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="white-oud" 
+          data-name="Navella White Oud" 
+          data-price="399" 
+          data-image="WhiteOud_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://amzn.to/4sYnkiM" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div>
 
 <div class="product-card" id="blue-oud" data-category="unisex">
-
+<a href="product.html?id=blue-oud" class="product-card-link">
 <div class="image-slider">
 <img src="BOud_web1.png" class="active" alt="Navella Blue Oud perfume bottle - unisex oud Eau De Parfum">
 <img src="BOud_web2.png" alt="Navella Blue Oud long lasting perfume packaging">
 <img src="BOud_web3.png" alt="Navella Blue Oud oud and marine fragrance notes">
 <img src="BOud_web4.png" alt="Navella Blue Oud exotic unisex fragrance lifestyle image">
 </div>
-
 <h3>Navella Blue Oud</h3>
 <p class="description">An exotic fusion of deep, mysterious oud lightened by cool, refreshing marine accords.</p>
 <p class="price">50ml — ₹399</p>
-
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="blue-oud" 
+          data-name="Navella Blue Oud" 
+          data-price="399" 
+          data-image="BOud_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
 <a href="https://amzn.to/3PY5vSp" class="buy-btn">Buy now from Amazon 🛒</a>
-
+</a>
 </div>
-<!--
-<div class="product-card" data-category="unisex">
-
-<div class="image-slider">
-<img src="perfume.png" class="active">
-<img src="perfume.png">
-<img src="perfume.png">
-</div>
-
-<h3>Navella For You</h3>
-<p>A unique, well-balanced composition designed to be a personal and intimate daily signature.</p>
- <p class="inspired">Navella's Signature Blend</p> 
-<p class="price">50ml — ₹399</p>
-
-<a href="https://amazon.in" class="buy-btn">Buy now from Amazon 🛒</a>
-
-</div>-->
 
 <div class="product-card" id="shadow" data-category="unisex">
+<a href="product.html?id=shadow" class="product-card-link">
   <div class="image-slider">
     <img src="Shadow_web1.png" class="active" alt="Navella Shadow perfume bottle - dark chocolate and orchid Eau De Parfum">
     <img src="Shadow_web2.png" alt="Navella Shadow long lasting unisex perfume packaging">
@@ -485,10 +513,20 @@
     <img src="Shadow_web4.png" alt="Navella Shadow dramatic unisex perfume lifestyle image">
   </div>
   <h3>Navella Shadow</h3>
-  <p>A deep, dramatic scent of dark chocolate and orchids for a bold statement.</p>
+  <p class="description">A deep, dramatic scent of dark chocolate and orchids for a bold statement.</p>
   <p class="inspired">Inspired by: Toumford Black Orchidde</p>
   <p class="price">50ml — ₹399</p>
+<!-- Button to add to cart -->
+  <button type="button" class="buy-btn add-to-cart-btn" 
+          data-id="shadow" 
+          data-name="Navella Shadow" 
+          data-price="399" 
+          data-image="Shadow_web1.png" 
+          data-volume="50ml">
+    Add to Cart 🛍️
+  </button>
   <a href="https://amzn.to/4cZJZ7F" class="buy-btn">Buy now from Amazon 🛒</a>
+</a>
 </div>
 
 </div>
@@ -496,14 +534,15 @@
 </section>
 
 <footer>
-<p>© 2026 Navella Perfumes</p>
-<p class="footer-note">All purchases are securely fulfilled via Amazon</p>
-<p style="margin-top: 10px; font-size: 11px;">
-<a href="privacy-policy.html" style="color: #999; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
-<a href="terms.html" style="color: #999; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-</p>
+  <p>© 2026 Navella™ Perfums · Enterprise: Naavya Inovations (Prop. Bhawna Arya)</p>
+  <p class="footer-note">H.No. 1042, Sector 19, Faridabad, Haryana · GSTIN: 06CASPA8226N1Z8</p>
+  <p style="margin-top: 14px; font-size: 11px;">
+    <a href="privacy-policy.html">Privacy Policy</a> | 
+    <a href="terms.html">Terms of Service</a> | 
+    <a href="refund-policy.html">Refund Policy</a> | 
+    <a href="contact.html">Contact Us</a>
+  </p>
 </footer>
-
 <script src="script.js"></script>
 
 </body>
