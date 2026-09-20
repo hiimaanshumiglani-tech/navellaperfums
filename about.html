@@ -1,132 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="About Navella Perfumes - Premium luxury fragrances crafted for confidence. Learn our story, mission, and commitment to quality perfumes at affordable prices in India.">
-<meta name="robots" content="index, follow">
-
-<title>About Us | Navella Perfumes - Premium Luxury Fragrances</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="canonical" href="https://navellaperfums.com/about.html">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Navella Perfumes",
-    "url": "https://navellaperfums.com/",
-    "logo": "https://navellaperfums.com/logo.png",
-    "description": "Premium luxury perfume brand specializing in long-lasting Eau De Parfum for men and women in India.",
-    "foundingDate": "2024",
-    "founder": {
-      "@type": "Person",
-      "name": "Navella"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | Navella™ Perfums</title>
+  <meta name="description" content="Discover the story behind Navella Perfums — an artisanal Indian luxury fragrance house crafting high-projection Eau De Parfum.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    .story-hero {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 70px;
     }
-  }
-}
-</script>
-
+    .story-hero h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .story-hero p.lead {
+      font-size: 17px;
+      line-height: 1.9;
+      color: rgba(245,236,224,0.85);
+      font-weight: 300;
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin: 80px auto;
+      max-width: 1100px;
+    }
+    .story-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid rgba(201,169,110,0.2);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .story-card h3 {
+      font-size: 28px;
+      color: var(--gold-soft);
+      margin-bottom: 16px;
+    }
+    .story-card p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: rgba(245,236,224,0.78);
+      margin-bottom: 14px;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 60px auto;
+    }
+    .pillar-item {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(201,169,110,0.18);
+      border-radius: 12px;
+      padding: 30px 24px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .pillar-item:hover {
+      transform: translateY(-5px);
+      border-color: rgba(201,169,110,0.45);
+    }
+    .pillar-icon {
+      font-size: 32px;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .pillar-item h4 {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 1px;
+    }
+    .pillar-item p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(245,236,224,0.7);
+    }
+    @media (max-width: 768px) {
+      .story-grid, .pillars-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body class="perfume-page">
 
-<div class="announcement-ribbon">
-<span>All orders fulfilled via Amazon — Secure checkout & fast delivery</span>
-</div>
+  <div class="announcement-ribbon">
+    <span>Artisanal Indian Olfactory Craftsmanship • Crafted by Naavya Inovations</span>
+  </div>
 
-<header>
+  <header>
+    <a href="index.html" class="logo"><img src="logo.png" alt="Navella™ Perfums"></a>
+<!-- Desktop & Mobile Drawer Navigation -->
+  <nav id="main-nav">
+    <a href="index.html">Home</a>
+    <a href="perfumes.html">Perfumes</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="order-status.html">Track Orders</a>
+    <a href="cart.html" class="cart-nav-link">
+      <svg class="cart-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+      <span>Cart</span>
+      <span class="cart-count-badge" id="nav-cart-count">0</span>
+    </a>
+    <a href="https://link.amazon/B0fAIjUik" class="amazon-link" target="_blank">
+      <img src="amazon-icon.png" alt="Amazon">
+      <span>Amazon Store</span>
+    </a>
+  </nav>
 
-<a href="index.html" class="logo">
-    <img src="logo.png" alt="Navella Perfums">
-</a>
+  <!-- Mobile Hamburger Button (Visible only on mobile) -->
+  <button type="button" class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="perfumes.html">Perfumes</a>
-<a href="about.html">About</a>
-<a href="blog.html">Blog</a>
-</nav>
+  <section class="products-page" style="padding-top: 150px;">
+    <div class="story-hero">
+      <h1>The House of Navella™</h1>
+      <p class="lead">
+        Born out of an obsession with formulation purity and lasting projection, Navella™ was founded to prove that world-class, macerated luxury perfumery belongs within everyday reach.
+      </p>
+    </div>
 
-</header>
+    <!-- 2-Column Brand Origin & Philosophy -->
+    <div class="story-grid">
+      <div class="story-card">
+        <h3>Our Heritage & Craft</h3>
+        <p>
+          Operated under Naavya Inovations in Faridabad, Haryana, Navella™ represents modern Indian olfactory craftsmanship. We craft bold, high-concentration Eau De Parfum blends tailored specifically for tropical climates and long workdays.
+        </p>
+        <p>
+          Every bottle contains carefully sourced aromatic compounds and concentrated perfume oils that undergo extensive maceration, ensuring balanced dry-downs without chemical harshness.
+        </p>
+      </div>
 
-<section class="products-page" style="padding-top: 172px;">
+      <div class="story-card">
+        <h3>The Olfactory Signature</h3>
+        <p>
+          From the marine freshness of <em>Hydra</em> to the deep woody warmth of <em>White Oud</em> and the sensual floral mystery of <em>Shadow</em>, each composition is engineered with a layered 3-stage pyramid: bright top notes, expressive hearts, and rich, lingering bases.
+        </p>
+        <p>
+          Our perfumes speak before you do—leaving a memorable, elegant trail that never overwhelms.
+        </p>
+      </div>
+    </div>
 
-<div class="category-description" style="max-width: 800px; margin: 0 auto;">
+    <!-- 3 Pillars of Quality -->
+    <h2 style="text-align: center; color: var(--gold-soft); margin-top: 60px;">The Navella Standard</h2>
+    <div class="pillars-grid">
+      <div class="pillar-item">
+        <span class="pillar-icon">✦</span>
+        <h4>True EDP Concentration</h4>
+        <p>Formulated with 15–20% perfume oil load for enduring 8+ hour longevity on Indian skin and fabrics.</p>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-icon">⚜</span>
+        <h4>Artisanal Maceration</h4>
+        <p>Aged patiently so raw spices, florals, and woods marry seamlessly into a smooth, non-synthetic bouquet.</p>
+      </div>
+      <div class="pillar-item">
+        <span class="pillar-icon">📦</span>
+        <h4>Direct & Secure Fulfillment</h4>
+        <p>Packed with shock-resistant protection and dispatched via surface courier or through our official Amazon store.</p>
+      </div>
+    </div>
 
-<h1 style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 20px;">About Navella Perfumes</h1>
+    <div style="text-align: center; margin-top: 60px;">
+      <a href="perfumes.html" class="buy-btn" style="padding: 16px 40px; font-size: 11px;">Explore The Wardrobe →</a>
+    </div>
+  </section>
 
-<p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
-Navella Perfumes was born from a simple belief: <strong>everyone deserves to smell extraordinary</strong>. We craft premium, long-lasting fragrances that don't come with luxury price tags.
-</p>
+  <footer>
+    <p>© 2026 Navella™ Perfums · Enterprise: Naavya Inovations (Prop. Bhawna Arya)</p>
+    <p class="footer-note">H.No. 1042, Sector 19, Faridabad, Haryana · GSTIN: 06CASPA8226N1Z8</p>
+    <p style="margin-top: 14px; font-size: 11px;">
+      <a href="privacy-policy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a> | 
+      <a href="refund-policy.html">Refund Policy</a> | 
+      <a href="contact.html">Contact Us</a>
+    </p>
+  </footer>
 
-<h2 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; font-family: 'Playfair Display', serif;">Our Story</h2>
-<p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
-In a world where premium perfumes cost thousands, we asked: why can't quality fragrances be accessible? Navella Perfumes was founded to bridge this gap — creating perfumes that deliver lasting impressions without breaking the bank.
-</p>
-<p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
-Each Navella fragrance is carefully formulated using quality ingredients to ensure strong projection and long-lasting sillage. Our 50ml Eau De Parfum bottles are designed to be your daily signature — whether for the boardroom, a night out, or everyday elegance.
-</p>
-
-<h2 style="font-size: 24px; margin-top: 40px; margin-bottom: 20px; font-family: 'Playfair Display', serif;">Our Promise</h2>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
-
-<div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px;">
-<h3 style="font-size: 16px; margin-bottom: 10px;">Premium Quality</h3>
-<p style="font-size: 14px; opacity: 0.9;">Each perfume is an Eau De Parfum concentration — not EDT — for maximum longevity and projection.</p>
-</div>
-
-<div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px;">
-<h3 style="font-size: 16px; margin-bottom: 10px;">Long Lasting</h3>
-<p style="font-size: 14px; opacity: 0.9;">Our fragrances are designed to be long lasting, so you stay memorable throughout the day.</p>
-</div>
-
-<div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px;">
-<h3 style="font-size: 16px; margin-bottom: 10px;">Affordable Luxury</h3>
-<p style="font-size: 14px; opacity: 0.9;">Premium ingredients shouldn't mean premium prices. Luxury should be accessible to all.</p>
-</div>
-
-<div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px;">
-<h3 style="font-size: 16px; margin-bottom: 10px;">Secure Shopping</h3>
-<p style="font-size: 14px; opacity: 0.9;">All orders are fulfilled via Amazon for reliable delivery and buyer protection.</p>
-</div>
-
-</div>
-
-<h2 style="font-size: 24px; margin-top: 50px; margin-bottom: 20px; font-family: 'Playfair Display', serif;">Our Collection</h2>
-<p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
-From aquatic fresh scents for men to sensual florals for women, our collection offers diverse fragrance profiles. Whether you prefer woody aromatics, crisp aquatics, or exotic oud blends — there's a Navella perfume waiting to become your signature.
-</p>
-
-<div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; margin-top: 40px;">
-<h3 style="font-size: 20px; margin-bottom: 20px;">Get in Touch</h3>
-<p style="font-size: 15px; margin-bottom: 15px;">Questions about our fragrances? Need recommendations? We're here to help.</p>
-<p style="font-size: 15px; margin-bottom: 8px;"><strong>Email:</strong> naavyainovations@gmail.com</p>
-<p style="font-size: 15px; margin-top: 20px;"><strong>Follow Us:</strong></p>
-<div style="margin-top: 10px; display: flex; gap: 15px;">
-<a href="https://www.instagram.com/navella_perfums/" target="_blank" style="color: #ddd; text-decoration: none; font-size: 14px;">Instagram</a>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Navella Perfumes</p>
-<p class="footer-note">All purchases are securely fulfilled via Amazon</p>
-<p style="margin-top: 10px; font-size: 11px;">
-<a href="privacy-policy.html" style="color: #999; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
-<a href="terms.html" style="color: #999; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
