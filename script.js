@@ -660,7 +660,7 @@ function renderCartPage() {
 
         // Step B: Configure and launch Razorpay checkout modal
         const options = {
-          key: orderData.keyId || "rzp_test_TYhLMTOOa5NfKh",
+          key: orderData.keyId || "rzp_live_TeJF4UMpNDx0f8",
           amount: orderData.amount * 100, // paise
           currency: "INR",
           name: "Navella Perfums",
